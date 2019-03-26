@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ClientName</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Amount</th>
+                <th>Currency</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+                <tr>
+                    <td>{{ row.client.username }}</td>
+                    <td>{{ row.title }}</td>
+                    <td>{{ row.description }}</td>
+                    <td>{{ row.amount }}</td>
+                    <td>{{ row.currency }}</td>
+                    <td>{{ row.date }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+<h2><a href="create">Go Back</a></h2>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Amount</th>
+                <th>Currency</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ data.client_id }}</td>
+                <td>{{ data.client.username }}</td>
+                <td>{{ data.title }}</td>
+                <td>{{ data.description }}</td>
+                <td>{{ data.amount }}</td>
+                <td>{{ data.currency }}</td>
+                <td>{{ data.date }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Title</th>
+                <th>View</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+                 <tr>
+                     <td>{{ row.client_id }}</td>
+                     <td>{{ row_client.username }}</td>
+                     <td>{{ row.title }}</td>
+                     <td>
+                         <span>
+                             <a href="viewrow?id={{ row.id }}">VIEW</a>
+                         </span>
+                     </td>
+                 </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

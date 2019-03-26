@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <h3>signup or Login</h3>
+    {% if msg %}
+        <h3>{{ msg }}</h3>
+    {% endif %}
+    <form action="" method="post" novalidate>
+        {{ csrf_token }}
+        {{ form | crispy }}
+        <input type="submit" class="btn btn-success" value="SignUp">
+    </form>
+{% endblock %}
